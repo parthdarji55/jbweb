@@ -9,20 +9,22 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  update-website:
+  send-html-content:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Update HTML
-        run: |
-          curl -X POST -H "Authorization: Bearer ${{ secrets.API_TOKEN }}" https://jbcharging.com/update-html
+    - name: Read index.html content
+      id: read-file
+      run: |
+        content=`cat index.html`
+        content="${content//'%'/'%25'}"
+        content="${content//$'\n'/'%0A'}"
+        content="${content//$'\r'/'%0D'}"
+        echo "::set-output name=content::$content"
 
-      - name: Update CSS
-        run: |
-          curl -X POST -H "Authorization: Bearer ${{ secrets.API_TOKEN }}" https://jbcharging.com/update-css
-
-      - name: Update JavaScript
-        run: |
-          curl -X POST -H "Authorization: Bearer ${{ secrets.API_TOKEN }}" https://jbcharging.com/update-js
+    - name: POST the content
+      run: |
+        curl -X POST -H "Content-Type: text/plain" --data "${{ steps.read-file.outputs.content }}" https://jbcharging.com/update-html
