@@ -702,8 +702,15 @@ nav {
     }
 }
 
-#steps div h7 {
+#steps div h6 {
     font-size: 2rem;
+    font-weight: 100;
+    color: #333;
+}
+
+#steps div p {
+    /* text-indent: 2rem; */
+    font-size: 1rem;
     font-weight: 100;
     color: #333;
 }
@@ -724,6 +731,7 @@ nav {
     padding: 2rem 0 0;
     font-size: 3rem;
     font-weight: 100;
+    text-align: center;
     color: #333;
 }
 

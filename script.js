@@ -16,19 +16,26 @@ $(document).ready(function() {
     const clientImages = [
         [
             'img/clients/clientImage1.jpg',
-            'img/clients/clientImage2.jpg',
-            'img/clients/clientImage3.jpg'
+            'img/clients/clientImage2.jpg'
         ],
         [
             'img/clients/clientImage4.jpg',
             'img/clients/clientImage5.jpg',
             'img/chargingBank.jpg'
+        ],
+        [
+            'img/clients/clientImage3.jpg',
+            'img/clients/clientImage4.jpg',
+            'img/clients/clientImage5.jpg'
         ]
     ];
     let idx = 0;
     const $imageContainer = $('#clientImgLoop');
-    function flash() {
-        $imageContainer.html(`<img src="${clientImages[idx][0]}"><img src="${clientImages[idx][1]}"><img src="${clientImages[idx][2]}">`);
+    function flash() {        
+        let imgHtml = '';
+        for (let i = 0; i < clientImages[idx].length; i++)
+            imgHtml += `<img src="${clientImages[idx][i]}">`;
+        $imageContainer.html(imgHtml);
         idx = (idx + 1) % clientImages.length;
     }
     flash();
