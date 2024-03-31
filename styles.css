@@ -1180,18 +1180,27 @@ nav {
 }
 
 #contact {
-    width: 100%;
-    margin: 0;
+    width: 40rem;
+    margin: 6rem auto;
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
     background-color: #faeee6;
     padding: 2rem 0;
+    border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 6px,
                 rgba(0, 0, 0, 0.17) 0px 12px 13px,
                 rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media screen and (max-width: 768px) {
+    #contact {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
 }
 
 #contactForm {
@@ -1200,8 +1209,8 @@ nav {
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
 }
 
 #contactForm h4 {
@@ -1338,7 +1347,7 @@ footer #additionalLinks {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -1350,6 +1359,21 @@ footer #additionalLinks ul {
     justify-content: center;
     align-items: baseline;
     list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    footer #additionalLinks ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer #additionalLinks ul li {
+        margin-bottom: 1rem;
+    }
+
+    footer #additionalLinks ul li:last-child {
+        margin-bottom: 0;
+    }
 }
 
 footer #additionalLinks ul li a {
