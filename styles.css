@@ -1280,6 +1280,12 @@ nav {
     transition: background-color 0.5s, color 0.9s;
 }
 
+@media screen and (max-width: 768px) {
+    #contactForm button {
+        padding: 0.6rem 3rem;
+    }
+}
+
 #contactForm button:hover, #contactForm button:active {
     background-color: #cd896e;
     color: #000;
