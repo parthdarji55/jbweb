@@ -135,6 +135,7 @@ nav {
 
 @media screen and (max-width: 768px) {
     #introLeft {
+        width: 100%;
         flex: 1;
         margin: auto;
         align-items: center;
@@ -247,8 +248,8 @@ nav {
 
 @media screen and (max-width: 768px) {
     #demo {
-        width: 100%;
-        margin: 0 auto 2rem;
+        width: 80%;
+        border-radius: 1rem;
     }
 }
 
@@ -351,8 +352,8 @@ nav {
 
 @media screen and (max-width: 768px) {
     #supports {
-        width: 100%;
-        margin: 0 auto 2rem;
+        width: 80%;
+        border-radius: 1rem;
     }
 }
 
@@ -451,14 +452,10 @@ nav {
 
 @media screen and (max-width: 768px) {
     #accepts {
-        width: 100%;
-        margin: 0 auto 2rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #accepts {
+        width: 80%;
+        margin: 0 0 2rem;
         padding: 0.5rem 0;
+        border-radius: 1rem;
     }
 }
 
@@ -538,6 +535,12 @@ nav {
     margin: 4rem 0 2rem;
 }
 
+@media screen and (max-width: 768px) {
+    #introRight video {
+        margin: 0 0 2rem;
+    }
+}
+
 #introRight video:hover, #introRight img:hover {
     animation: nod 0.5s ease-in-out;
 }
@@ -591,16 +594,16 @@ nav {
 
 @media screen and (max-width: 1024px) {
     #products #options {
-        width: 40rem;
+        width: 100%;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     #products #options {
-        width: 25rem;
+        width: 100%;
     }
 }
 
@@ -662,7 +665,7 @@ nav {
 }
 
 #steps h4 {
-    margin: 1rem 0;
+    margin: 0 0 1rem;
     padding: 2rem 0 0;
     font-size: 4rem;
     font-weight: 100;
@@ -765,7 +768,7 @@ nav {
 
 @media screen and (max-width: 768px) {
     #faq div {
-        width: 15rem;
+        width: 80%;
     }
 }
 
@@ -1053,6 +1056,12 @@ nav {
     }
 }
 
+#gallery span a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+}
+
 #gallery h4 {
     margin: 0;
     padding: 0;
@@ -1244,7 +1253,7 @@ nav {
     font-size: 1rem;
     background-color: #f9f1ecdd;
     color: #555;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     box-shadow: inset 2px 2px 5px #d8cec8dd,
                 inset -5px -5px 10px #fff;
     transition: all 0.2s ease-in-out;
@@ -1407,4 +1416,54 @@ footer #additionalLinks ul li a:hover {
 
 .underline {
     text-decoration: underline;
+}
+
+#galleryHeading {
+    margin: 12rem auto 2rem;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #333;
+}
+
+@media screen and (max-width: 1024px) {
+    #galleryHeading {
+        font-size: 3rem;
+    }
+}
+
+.gallery-container {
+    width: 90%;
+    margin: 0 auto 4rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 2px 2px 5px #e1dbd7dd,
+                inset -5px -5px 10px #fff;
+}
+
+.gallery-content {
+    width: 90%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gallery-content img {
+    height: 10rem;
+    max-width: 40%;
+    margin: 1rem;
+    border: 0.3rem solid #ebc28b;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
