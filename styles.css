@@ -232,9 +232,41 @@ nav {
     background-color: #8791df55;
 }
 
+#cgi {
+    width: 80%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    #cgi {
+        margin-right: 0;
+    }
+}
+
+#cgi img {
+    width: 40%;
+}
+
+#cgi {
+    animation: bobUpDown 1.5s linear infinite;
+}
+
+@keyframes bobUpDown {
+    0%, 100% {
+        transform: translateY(0.5rem);
+    }
+    50% {
+        transform: translateY(-0.5rem);
+    }
+}
+
 #demo {
     width: 90%;
-    margin: 0 0 2rem;
+    margin: 2rem 0;
     padding: 0 0 0.5rem;
     display: flex;
     flex-direction: column;
